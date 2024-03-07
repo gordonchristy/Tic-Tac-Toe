@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+<!--These bootstrap styling elements are used to style the Tic Tac Toe table, the text announcing whose turn it is,
+    and the text announcing the winner.
+ -->
+
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    td {
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      border: 2px solid #333;
+      cursor: pointer;
+    }
+
+    #turn {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    #winner {
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: bold;
+
+    }
+
+    </style>
+</head>
+<body> 
+    
+<!--This HTML element creates the grid in the Tic Tac Toe game and tells JavaScript to
+call the function handleCellClick whenever the player clicks on a cell.-->       
+<h1 class="text-center">Tic Tac Toe</h1>
+<div id="turn" class="text-center">Player X's turn</div>
+<div id="winner" class="text-center"></div>
+<table id="board">
+        <tr>
+            <td onclick="handleCellClick(this)"></td>
+            <td onclick="handleCellClick(this)"></td>
+            <td onclick="handleCellClick(this)"></td>
+      </tr>
+      <tr>
+            <td onclick="handleCellClick(this)"></td>
+            <td onclick="handleCellClick(this)"></td>
+            <td onclick="handleCellClick(this)"></td>
+      </tr>
+      <tr>
+            <td onclick="handleCellClick(this)"></td>
+            <td onclick="handleCellClick(this)"></td>
+            <td onclick="handleCellClick(this)"></td>
+      </tr>
+    </table>
+
+    <div>
+        <button onclick="resetGame()">Restart</button>
+    </div>
+
+
+
+
+
+
+<script src="index.js"></script>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</body>
+</html>
